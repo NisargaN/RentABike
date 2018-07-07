@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bike.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bike.price %>
+</p>
+
+<p>
+  <strong>Kilometer:</strong>
+  <%= @bike.kilometer %>
+</p>
+
+<p>
+  <strong>image:</strong>
+  <%=image_tag @bike.avatar %>
+</p>
+
+<p>
+  <strong>Is available:</strong>
+  <%= @bike.is_available %>
+</p>
+
+<%= link_to 'Edit', edit_bike_path(@bike) %> |
+<%= link_to 'Back', bikes_path %>

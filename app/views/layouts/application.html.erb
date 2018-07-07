@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RoyalBrothers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  </head>
+
+<body class="home bike">
+<div class="phone_number right" style="background: rgba(54, 54, 54, 0.9); !important;">
+  <span class="right"> / +91-1234567890</span>
+  <span class="right">+91-1234567890</span>
+  <span class="right phone_icon hide-on-small-only"><img src="https://d36g7qg6pk2cm7.cloudfront.net/assets/phone-receiver-1ee4c306b2c7df9f85ef37748ebe0aad88a088a0b42c95ca8a8bdbc9cbe051a1.svg" alt="phone" width="100%" height="100%" ></span>
+  <a href="#"><span class="refer_a_friend">Refer friends</span></a>
+</div>
+<nav style="background: rgba(0,0,0,0.5) !important;">
+  <div class="nav-wrapper" id="menu" itemscope="" itemtype="#">
+      <a itemprop="url" title="Royal Brothers"  href="#" class="brand-logo valign-wrapper left" id="logo_img_text">
+      <img itemprop="logo" title="Royal Brothers" src="https://d36g7qg6pk2cm7.cloudfront.net/royalbrothers_logo.png" alt="Royal Brothers" id="logo_img_2" class="valign left"  width="40" height="40"/>
+      <span id="logo_text" class="hide-on-small-only">
+        Royal<br>Brothers
+      </span>
+    </a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+    <a class="right hide-on-large-only" data-book-button="false" id="search_button" style="margin-right: 10px;" href="#filter_it_search" ><i class="material-icons">search</i></a>
+    <ul id="nav-mobile" class="hide-on-med-and-down">
+        <li class="right" style="border: 1px solid #fff;line-height: 2rem;display: flex;margin-top: 15px;margin-right: 20px;">
+          <span class="display-inline-block"><a class="" href="#">Sign up</a></span> | <span class="display-inline-block"><a class="" href="#">Log in</a></span>
+        </li>
+      <li class="right margin_right">
+        <a class="valign-wrapper dropdown-button menu_list" data-constrainwidth="false" data-beloworigin="true" href="#!" data-activates="dropdown1">Menu <span class="material-icons valign" style="font-size: 22px;position: relative;top: 1px;">keyboard_arrow_down</span></a>
+      </li>
+        <li class="right margin_right">
+          <%= link_to 'Bikes', bikes_path ,class: "valign-wrapper"%>  
+        </li> 
+      <li class="city-selection">
+        <a class="valign dropdown-button menu_list">
+            <p class="text_loc valign" id="city" data-city="bangalore">Bikes in Bangalore</p>
+            <span class="material-icons">keyboard_arrow_down</span>
+        </a>
+      </li>
+      <li class="right margin_right">
+          <a href="#">Package</a>
+      </li>
+      <li class="right margin_right">
+          <a href="#">Tariff</a>
+      </li>
+      
+    </ul>
+
+    <ul class="left hide-on-large-only city_medium">
+      <li class="city-selection">
+        <a class="valign">
+            <p class="text_loc valign" id="city" data-city="bangalore">Bikes in Bangalore</p>
+            <span class="material-icons">keyboard_arrow_down</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        
+      <li>
+        <a href="#">Tariff</a>
+      </li>
+      <li>
+        <a href="#">Package</a>
+      </li>
+        <li><a class="" href="#">Sign up</a></li>
+        <li><a class="" href="#">Log in</a></li>
+      <li>
+        <ul class="collapsible collapsible-accordion">
+            <li>
+                <a class="collapsible-header waves-effect waves-teal valign-wrapper">More <i class="material-icons valign right font22">keyboard_arrow_down</i></a>
+                <div class="collapsible-body">
+                  <ul>          
+                  </ul>
+                </div>
+            </li>
+          </ul>
+        </li>
+      </ul> 
+    </div>
+</nav>
+
+    <%= yield %>
+    <footer class="page-footer">
+  <div class="row footer_content">
+    <div class="col m4 l4 hide-on-small-only offset-m1 offset-l1">
+      <div class="col m4 l4 logo" itemscope="" itemtype="http://schema.org/Organization">
+        <a itemprop="url" title="Royal Brothers" href=" https://www.royalbrothers.com">
+          <img src="https://d36g7qg6pk2cm7.cloudfront.net/assets/royalbrothers-b5133067e818b6e19355a20c612f8004f4946e20129ab9939e4cdc641405ac1f.png" alt="Royal Brothers" class="responsive-img" width="100%" height="100%" title="Royal Brothers">
+        </a>
+      </div>
+      <div class="col m8 l8 logo_text">
+        <h3><span>Royal</span> Brothers</h3>
+      </div>
+    </div>
+    <div class="col m2 l2 s12 links1">
+      <h5>COMPANY</h5>
+      <ul>
+        <li class="hide-on-med-and-up">
+            <a href="https://www.royalbrothers.com/bangalore/bike-rentals/tariff">Tariff</a>
+        </li>
+        <li><a href="https://www.royalbrothers.com/faq">FAQ</a></li>
+        <li><a href="https://www.royalbrothers.com/privacy-policy">Privacy Policy</a></li>
+        <li><a href="https://www.royalbrothers.com/terms-and-conditions">Terms & Conditions</a></li>
+        <li class="hide-on-med-and-up"><a href="#">Partner with us</a></li>
+        <li class="hide-on-med-and-up"><a href="#">Reach Us</a></li>
+        <li class="hide-on-med-and-up"><a href="https://www.royalbrothers.com/about">About Us</a></li>
+        <li class="hide-on-med-and-up"><a href="https://www.royalbrothers.com/sitemap">Sitemap</a></li>
+      </ul>
+    </div>
+    <div class="col m2 l2 s12 links2 hide-on-small-only">
+      <ul>
+        <li class="padding_top_bottom">
+            <a href="#">Tariff</a>
+        </li>
+        <li class="padding_top_bottom"><a href="#">Partner with us</a></li>
+        <li class="padding_top_bottom"><a href="#">Reach Us</a></li>
+        <li class="padding_top_bottom"><a href="#">About Us</a></li>
+        <li class="padding_top_bottom"><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="col m2 l2 s12 links1">
+      <h5>FOLLOW</h5>
+      <ul>
+        <li><a href="#" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a href="#" rel="noopener" target="_blank">Twitter</a></li>
+        <li><a href="#" rel="noopener" target="_blank">Instagram</a></li>
+        <li><a href="#" rel="noopener" target="_blank">Linkedin</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
