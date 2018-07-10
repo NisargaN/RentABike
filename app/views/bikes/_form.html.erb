@@ -14,29 +14,99 @@
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
+    <span id = "nameError"></span>
   </div>
 
   <div class="field">
     <%= form.label :price %>
     <%= form.text_field :price %>
+    <span id="priceError"></span>
   </div>
 
   <div class="field">
     <%= form.label :kilometer %>
     <%= form.text_field :kilometer %>
+    <span id = "kilometerlimitError"></span>
   </div>
   <div>
     <%= form.label :image %>
     <%= form.file_field :avatar %>
+    <span id = "imageError"></span>
   </div>
   </div>
 
   <div class="field">
     <%= form.label :is_available %>
     <%= form.check_box :is_available %>
+    <span id = "availabilityError"></span>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Bike", id: "submit" %>
+    <span id = "submitError"></span>
   </div>
 <% end %>
+
+<script>
+var nameHandle = document.getElementById('bike_name');
+var nameErrorHandle = document.getElementById('nameError');
+var priceHandle = document.getElementById('bike_price');
+var priceErrorHandle = document.getElementById('priceError');
+var kilometerlimitHandle = document.getElementById('bike_kilometer');
+var kilometerlimitErrorHandle = document.getElementById('kilometerlimitError');
+var imageHandle = document.getElementById('bike_image');
+var imageErrorHandle = document.getElementById('imageError');
+var availabilityHandle = document.getElementById('bike_available');
+var availabilityErrorHandle = document.getElementById('availabilityError');
+
+nameHandle.onkeyup = function(){
+    if (nameHandle.value == ""){
+      nameErrorHandle.innerHTML =  "Bike name can't be blank";
+    } else
+    {
+    if (nameHandle.value.length >= "2") {
+        nameErrorHandle.innerHTML = "";
+      } else {
+        nameErrorHandle.innerHTML = "Bike name should be more than 1 character";
+      }
+    }
+
+  }
+priceHandle.onblur = function(){
+  if(priceHandle.value == "")
+  {
+    priceErrorHandle.innerHTML = "Price cannot be blank";
+  }
+  else if(priceHandle.value < "1")
+  {
+    priceErrorHandle.innerHTML = "Price cannot be less than 1";
+  }
+  else if(isNaN(priceHandle.value)) {
+    priceErrorHandle.innerHTML = "Price should be a number";
+  }
+  else{
+    priceErrorHandle.innerHTML = "";
+  }
+};
+
+kilometerlimitHandle.onkeyup = function(){
+  if(kilometerlimitHandle.value == "")
+  {
+    kilometerlimitErrorHandle.innerHTML = "Kilometer limit cannot be blank";
+  }
+  else if(kilometerlimitHandle.value < "1")
+  {
+    kilometerlimitErrorHandle.innerHTML = "Kilometer limit cannot be less than 1";
+  }
+  else if(isNaN(kilometerlimitHandle.value)) {
+    kilometerlimitErrorHandle.innerHTML = "Kilometer limit should be a number";
+  }
+  else{
+    kilometerlimitErrorHandle.innerHTML = "";
+  }
+};
+
+
+var submitHandle = document.getElementById('submit');
+submitHandle.disabled = true;
+</script>
