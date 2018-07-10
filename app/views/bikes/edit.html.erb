@@ -1,6 +1,10 @@
+<div class="container" style="margin-top: 100px">
 <h1>Editing Bike</h1>
 
 <%= render 'form', bike: @bike %>
-
-<%= link_to 'Show', @bike %> |
-<%= link_to 'Back', bikes_path %>
+<div style="padding-bottom: 26px">
+	
+	<%= link_to 'Show', @bike,style: "background-color: #fddd4a; ",class: "btn btn-default black-text bold" %>
+</div>
+<%#= link_to 'Back', bikes_path,style: "background-color: #fddd4a;",class: "btn btn-default black-text bold" %>
+</div>
