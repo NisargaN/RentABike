@@ -20,13 +20,13 @@
 
     <div class="field">
       <%= form.label :price %>
-      <%= form.number_field :price %>
+      <%= form.text_field :price %>
       <span id="priceError" style="color: red"></span>
     </div>
 
     <div class="field">
       <%= form.label :kilometer %>
-      <%= form.number_field :kilometer %>
+      <%= form.text_field :kilometer %>
       <span id = "kilometerlimitError" style="color: red" ></span>
     </div>
     <div class="form-group">
@@ -36,8 +36,9 @@
     </div>
 
     <div class="checkbox">
-      <%= form.label :is_available %>
+      <%= form.label :is_available%><span>(Enter 1 for Available ,0 for Not available)</span>
       <%= form.number_field :is_available %>
+
     </div>
     <div class="actions" style="padding-bottom: 26px">
       <%= form.submit "Create Bike", id: "submit",style: "background-color: #fddd4a;",class: "btn btn-default black-text bold" %>

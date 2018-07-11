@@ -1,24 +1,27 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DOCUMENTATION:-
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version : 2.3.1
 
-* System dependencies
+* Rails version : 5.2.0 
 
-* Configuration
+* Controllers : There are 2 controllers(bikes_controller and home_controller).
 
-* Database creation
+* Models : There is one model(bike.rb) which has the relevant associations.
 
-* Database initialization
+* Views : There are 2 view files(bikes and home).
+			-The bikes view contains a form where a new bike can be added. 
+			-The home view contains details about the home page.			
 
-* How to run the test suite
+* Images : Made use of active storage to upload the images. 			
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database : PostgreSQL as the database for ActiveRecord.
 
-* Deployment instructions
+* Gemfile : Contails all the required gems for the application to run effectively.	
 
-* ...
+* CSS : I have incorporated the basic css from the royalBrothers.com website.		
+
+* Deployment : Deployed on Heroku
+
+
